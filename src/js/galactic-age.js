@@ -1,6 +1,7 @@
 export default class GalacticAge {
   constructor(earthAge) {
     this.earthAge = earthAge;
+    this.maxAge = 81;
     this.bodies = {
       'mercury': 0.24,
       'venus': 0.62,
@@ -19,5 +20,9 @@ export default class GalacticAge {
     } else {
       return 0;
     }
+  }
+
+  getYearsLeft(planet) {
+    return -1;
   }
 }

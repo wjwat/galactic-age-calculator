@@ -43,3 +43,24 @@ describe('GalacticAge.getAge()', () => {
     }
   );
 });
+
+describe('GalacticAge.getYearsLeft()', () => {
+  const ga = new GalacticAge(35);
+  const testAgesByBody = [
+    ['mercury', 191.67],
+    ['venus', 74.19],
+    ['earth', 46.00],
+    ['mars', 24.47],
+    ['jupiter', 3.88],
+    ['saturn', 1.56],
+    ['uranus', 0.55],
+    ['neptune', 0.28],
+    ['blorp', 0]
+  ];
+
+  test.each(testAgesByBody)('return val for .getYearsLeft("%s") should equal %d',
+    (planet, solarYear) => {
+      expect(ga.getYearsLeft(planet)).toEqual(solarYear);
+    }
+  );
+});
