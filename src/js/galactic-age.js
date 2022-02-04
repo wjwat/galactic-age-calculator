@@ -26,7 +26,7 @@ export default class GalacticAge {
     if (this.bodies[planet]) {
       let maxAgeOnBody = this.maxAge / this.bodies[planet];
       let currentAgeOnBody = this.earthAge / this.bodies[planet];
-      return Number((maxAgeOnBody - currentAgeOnBody).toFixed(2));
+      return Math.abs(Number((maxAgeOnBody - currentAgeOnBody).toFixed(2)));
     } else {
       return 0;
     }
