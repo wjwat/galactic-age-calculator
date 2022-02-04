@@ -14,6 +14,8 @@ export default class GalacticAge {
   }
 
   getAge(planet) {
-    return -1;
+    if (this.bodies[planet]) {
+      return Number((this.earthAge * this.bodies[planet]).toFixed(1));
+    }
   }
 }
