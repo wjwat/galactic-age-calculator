@@ -46,19 +46,25 @@ describe('GalacticAge.getAge()', () => {
 
 describe('GalacticAge.getYearsLeft()', () => {
   const testYearsLeftByBody = [
-    ['mercury', 191.67],
-    ['venus', 74.19],
-    ['earth', 46.00],
-    ['mars', 24.47],
-    ['jupiter', 3.88],
-    ['saturn', 1.56],
-    ['uranus', 0.55],
-    ['neptune', 0.28],
-    ['blorp', 0]
+    ['mercury', 191.67], ['venus', 74.19], ['earth', 46.00],
+    ['mars', 24.47], ['jupiter', 3.88], ['saturn', 1.56],
+    ['uranus', 0.55], ['neptune', 0.28], ['blorp', 0]
+  ];
+
+  const testYearsOverByBody = [
+    ['mercury', 79.17], ['venus', 30.65], ['earth', 19.00],
+    ['mars', 10.11], ['jupiter', 1.60], ['saturn', 0.64],
+    ['uranus', 0.23], ['neptune', 0.12], ['blorp', 0]
   ];
 
   test.each(testYearsLeftByBody)('return val for .getYearsLeft("%s") should equal %d',
     (planet, solarYear) => {
+      expect(ga.getYearsLeft(planet)).toEqual(solarYear);
+    }
+  );
+  test.each(testYearsOverByBody)('ret pos val for .getYearsLeft("%s") if age is past life expectancy',
+    (planet, solarYear) => {
+      const ga = new GalacticAge(100);
       expect(ga.getYearsLeft(planet)).toEqual(solarYear);
     }
   );
