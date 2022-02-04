@@ -1,0 +1,16 @@
+main, .epi-title {
+  max-width: 40rem;
+}
+
+.epi-title {
+  margin: 1em auto 0.5em auto;
+}
+
+footer {
+  min-height: 5em;
+}
+
+footer p {
+  margin: auto;
+  text-align: center;
+}
