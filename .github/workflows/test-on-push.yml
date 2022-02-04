@@ -7,7 +7,7 @@ on:
   push:
     branches: [ main ]
   workflow_dispatch:
-    branches: [ main ]
+    branches: [ main, gh-workflow ]
 
 jobs:
   build:
