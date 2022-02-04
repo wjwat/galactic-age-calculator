@@ -1,6 +1,7 @@
 import GalacticAge from './../src/js/galactic-age.js';
 
 describe('GalacticAge', () => {
+  const ga = new GalacticAge(35);
   const testBodies = [
     ['mercury', 0.24],
     ['venus', 0.62],
@@ -11,7 +12,6 @@ describe('GalacticAge', () => {
     ['uranus', 84.07],
     ['neptune', 164.90]
   ];
-  const ga = new GalacticAge(35);
 
   test('creates a earthAge property with a value that is passed in', () => {
     expect(ga.earthAge).toEqual(35);
@@ -26,18 +26,18 @@ describe('GalacticAge', () => {
 describe('GalacticAge.getAge()', () => {
   const ga = new GalacticAge(35);
   const testAgesByBody = [
-    ['mercury', 8.4],
-    ['venus', 21.7],
-    ['earth', 35.0],
-    ['mars', 65.8],
-    ['jupiter', 415.1],
-    ['saturn', 1031.8],
-    ['uranus', 2942.4],
-    ['neptune', 5771.5],
+    ['mercury', 145.83],
+    ['venus', 56.45],
+    ['earth', 35.00],
+    ['mars', 18.62],
+    ['jupiter', 2.95],
+    ['saturn', 1.19],
+    ['uranus', 0.42],
+    ['neptune', 0.21],
     ['blorp', 0]
   ];
 
-  test.each(testAgesByBody)('return value for .getAge("%s") should equal %d',
+  test.each(testAgesByBody)('return val for .getAge("%s") should equal %d',
     (planet, solarYear) => {
       expect(ga.getAge(planet)).toEqual(solarYear);
     }
