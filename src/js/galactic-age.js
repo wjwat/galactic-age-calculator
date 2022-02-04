@@ -31,4 +31,8 @@ export default class GalacticAge {
       return 0;
     }
   }
+
+  getPlanets() {
+    return false;
+  }
 }

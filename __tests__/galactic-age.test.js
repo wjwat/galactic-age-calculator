@@ -1,7 +1,8 @@
 import GalacticAge from './../src/js/galactic-age.js';
 
+const ga = new GalacticAge(35);
+
 describe('GalacticAge', () => {
-  const ga = new GalacticAge(35);
   const testBodies = [
     ['mercury', 0.24],
     ['venus', 0.62],
@@ -24,7 +25,6 @@ describe('GalacticAge', () => {
 });
 
 describe('GalacticAge.getAge()', () => {
-  const ga = new GalacticAge(35);
   const testAgesByBody = [
     ['mercury', 145.83],
     ['venus', 56.45],
@@ -45,8 +45,7 @@ describe('GalacticAge.getAge()', () => {
 });
 
 describe('GalacticAge.getYearsLeft()', () => {
-  const ga = new GalacticAge(35);
-  const testAgesByBody = [
+  const testYearsLeftByBody = [
     ['mercury', 191.67],
     ['venus', 74.19],
     ['earth', 46.00],
@@ -58,9 +57,26 @@ describe('GalacticAge.getYearsLeft()', () => {
     ['blorp', 0]
   ];
 
-  test.each(testAgesByBody)('return val for .getYearsLeft("%s") should equal %d',
+  test.each(testYearsLeftByBody)('return val for .getYearsLeft("%s") should equal %d',
     (planet, solarYear) => {
       expect(ga.getYearsLeft(planet)).toEqual(solarYear);
     }
   );
+});
+
+describe('GalacticAge.getPlanets()', () => {
+  const testBodyNames = [
+    'mercury',
+    'venus',
+    'earth',
+    'mars',
+    'jupiter',
+    'saturn',
+    'uranus',
+    'neptune',
+  ];
+
+  test(`return val for .getPlanets() should equal ${testBodyNames}`, () => {
+    expect(ga.getPlanets()).toEqual(testBodyNames);
+  });
 });
