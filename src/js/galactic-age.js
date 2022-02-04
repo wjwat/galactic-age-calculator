@@ -12,4 +12,8 @@ export default class GalacticAge {
       'neptune': 164.90
     };
   }
+
+  getAge(planet) {
+    return -1;
+  }
 }
