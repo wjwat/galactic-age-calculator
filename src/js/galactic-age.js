@@ -33,6 +33,6 @@ export default class GalacticAge {
   }
 
   getPlanets() {
-    return false;
+    return Object.keys(this.bodies);
   }
 }
