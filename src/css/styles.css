@@ -15,6 +15,11 @@ button {
   float: right;
 }
 
+.big-and-bold {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 footer {
   min-height: 5em;
 }
