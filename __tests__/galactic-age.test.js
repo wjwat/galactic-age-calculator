@@ -4,13 +4,8 @@ const ga = new GalacticAge(35);
 
 describe('GalacticAge', () => {
   const testBodies = [
-    ['mercury', 0.24],
-    ['venus', 0.62],
-    ['earth', 1],
-    ['mars', 1.88],
-    ['jupiter', 11.86],
-    ['saturn', 29.48],
-    ['uranus', 84.07],
+    ['mercury', 0.24], ['venus', 0.62], ['earth', 1], ['mars', 1.88],
+    ['jupiter', 11.86], ['saturn', 29.48], ['uranus', 84.07],
     ['neptune', 164.90]
   ];
 
@@ -26,14 +21,8 @@ describe('GalacticAge', () => {
 
 describe('GalacticAge.getAge()', () => {
   const testAgesByBody = [
-    ['mercury', 145.83],
-    ['venus', 56.45],
-    ['earth', 35.00],
-    ['mars', 18.62],
-    ['jupiter', 2.95],
-    ['saturn', 1.19],
-    ['uranus', 0.42],
-    ['neptune', 0.21],
+    ['mercury', 145.83], ['venus', 56.45], ['earth', 35.00], ['mars', 18.62],
+    ['jupiter', 2.95], ['saturn', 1.19], ['uranus', 0.42], ['neptune', 0.21],
     ['blorp', 0]
   ];
 
@@ -46,15 +35,15 @@ describe('GalacticAge.getAge()', () => {
 
 describe('GalacticAge.getYearsLeft()', () => {
   const testYearsLeftByBody = [
-    ['mercury', 191.67], ['venus', 74.19], ['earth', 46.00],
-    ['mars', 24.47], ['jupiter', 3.88], ['saturn', 1.56],
-    ['uranus', 0.55], ['neptune', 0.28], ['blorp', 0]
+    ['mercury', 191.67], ['venus', 74.19], ['earth', 46.00], ['mars', 24.47],
+    ['jupiter', 3.88], ['saturn', 1.56], ['uranus', 0.55], ['neptune', 0.28],
+    ['blorp', 0]
   ];
 
   const testYearsOverByBody = [
-    ['mercury', 79.17], ['venus', 30.65], ['earth', 19.00],
-    ['mars', 10.11], ['jupiter', 1.60], ['saturn', 0.64],
-    ['uranus', 0.23], ['neptune', 0.12], ['blorp', 0]
+    ['mercury', 79.17], ['venus', 30.65], ['earth', 19.00], ['mars', 10.11],
+    ['jupiter', 1.60], ['saturn', 0.64], ['uranus', 0.23], ['neptune', 0.12],
+    ['blorp', 0]
   ];
 
   test.each(testYearsLeftByBody)('return val for .getYearsLeft("%s") should equal %d',
@@ -72,13 +61,7 @@ describe('GalacticAge.getYearsLeft()', () => {
 
 describe('GalacticAge.getPlanets()', () => {
   const testBodyNames = [
-    'mercury',
-    'venus',
-    'earth',
-    'mars',
-    'jupiter',
-    'saturn',
-    'uranus',
+    'mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus',
     'neptune',
   ];
 
