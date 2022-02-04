@@ -6,11 +6,19 @@ main, .epi-title {
   margin: 1em auto 0.5em auto;
 }
 
+form {
+  overflow: hidden;
+}
+
+button {
+  margin-top: 0.5rem;
+  float: right;
+}
+
 footer {
   min-height: 5em;
 }
 
-footer p {
+.lilguy p {
   margin: auto;
-  text-align: center;
 }
