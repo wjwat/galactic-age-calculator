@@ -12,6 +12,10 @@ describe('GalacticAge', () => {
   test('creates a earthAge property with a value that is passed in', () => {
     expect(ga.earthAge).toEqual(35);
   });
+  test('turns any negative values passed in into positive ones', () => {
+    const ga = new GalacticAge(-35);
+    expect(ga.earthAge).toEqual(35);
+  });
   test.each(testBodies)('create property "bodies" where bodies[%s] === %d',
     (planet, solarYear) => {
       expect(ga.bodies[planet]).toEqual(solarYear);

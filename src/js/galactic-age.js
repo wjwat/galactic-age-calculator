@@ -1,5 +1,6 @@
 export default class GalacticAge {
   constructor(earthAge) {
+    // should deal with negative values of earthAge
     this.earthAge = earthAge;
     this.maxAge = 81;
     this.bodies = {
