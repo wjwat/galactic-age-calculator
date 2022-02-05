@@ -1,7 +1,6 @@
 export default class GalacticAge {
   constructor(earthAge) {
-    // should deal with negative values of earthAge
-    this.earthAge = earthAge;
+    this.earthAge = Math.abs(earthAge);
     this.maxAge = 81;
     this.bodies = {
       'mercury': 0.24,
